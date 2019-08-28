@@ -5,13 +5,21 @@ import pprint
 import toml
 import sys
 
+# custom formatter to drop the string encoding indicators like u"test"
+def my_safe_repr(object, context, maxlevels, level):
+    typ = pprint._type(object)
+    if typ is unicode:
+        object = str(object)
+    return pprint._safe_repr(object, context, maxlevels, level)
 
 def main(file_path, toml_path):
     return_value = None
     data = toml.load(open(file_path))
 
     if toml_path == ".":
-        pprint.pprint(data)
+        printer = pprint.PrettyPrinter()
+        printer.format = my_safe_repr
+        printer.pprint(data)
         return
 
     split_filter = toml_path.split(".")
