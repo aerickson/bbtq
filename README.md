@@ -2,6 +2,8 @@
 
 A barebones python tq (like jq, but for toml).
 
+[![Build Status](https://travis-ci.com/aerickson/tq.svg?branch=master)](https://travis-ci.com/aerickson/tq)
+
 ## usage
 
 ```
