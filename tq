@@ -26,12 +26,16 @@ def main(file_path, toml_path):
     # print(split_filter)
 
     # TODO: how to support arbitrary depth without a ton of elif blocks?
-    if filter_length == 2:
-        return_value = data[split_filter[1]]
-    elif filter_length == 3:
-        return_value = data[split_filter[1]][split_filter[2]]
-    else:
-        print("ERROR: can't handle that input yet")
+    try:
+        if filter_length == 2:
+            return_value = data[split_filter[1]]
+        elif filter_length == 3:
+            return_value = data[split_filter[1]][split_filter[2]]
+        else:
+            print("ERROR: I don't know that query syntax yet (1).")
+            sys.exit(1)
+    except KeyError:
+        print("ERROR: I don't know that query syntax yet (2).")
         sys.exit(1)
 
     # printer.pprint(return_value)
