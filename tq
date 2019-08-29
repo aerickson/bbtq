@@ -12,7 +12,11 @@ def print_object(obj):
 
 def main(file_path, toml_path):
     return_value = None
-    data = toml.load(open(file_path))
+    if type(file_path) == str:
+        data = toml.load(open(file_path))
+    else:
+        # this is a _io.TextIOWrapper object
+        data = toml.loads(file_path.read())
 
     if toml_path == ".":
         print_object(data)
@@ -42,7 +46,8 @@ def main(file_path, toml_path):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("filter")
-    parser.add_argument("file")
+    parser.add_argument('file', nargs='?', type=argparse.FileType('r'),
+                        default=sys.stdin)
     args = parser.parse_args()
 
     main(args.file, args.filter)

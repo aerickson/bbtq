@@ -32,7 +32,6 @@ $ ./tq .database.ports test/test.toml
 ## known issues
 
 - Only supports queries from depth 0-2 currently.
-- No stdin support yet.
 
 ## why
 
