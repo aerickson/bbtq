@@ -1,6 +1,8 @@
-import pytest
-import subprocess
 import os
+import subprocess
+
+import pytest
+
 
 @pytest.fixture
 # script working directory
@@ -17,7 +19,7 @@ def test_lvl0(root_dir):
 def test_lvl1(root_dir):
   command = "%s/tq .title %s/test/test.toml" % (root_dir, root_dir)
   result = subprocess.run(command, shell=True, capture_output=True)
-  expected = "'TOML Example'"
+  expected = "TOML Example"
   assert result.stdout.decode().strip() == expected
 
 def test_lvl2(root_dir):
