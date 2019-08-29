@@ -10,6 +10,7 @@ import sys
 def my_safe_repr(object, context, maxlevels, level):
     return pprint._safe_repr(object, context, maxlevels, level)
 
+
 def main(file_path, toml_path):
     return_value = None
     printer = pprint.PrettyPrinter()
