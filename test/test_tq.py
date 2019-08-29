@@ -14,7 +14,7 @@ def root_dir():
 def test_lvl0(root_dir):
     command = "%s/tq . %s/test/simple.toml" % (root_dir, root_dir)
     result = subprocess.run(command, shell=True, capture_output=True)
-    expected = "{'title': 'TOML Example 2345'}"
+    expected = 'title = "TOML Example 2345"'
     assert result.stdout.decode().strip() == expected
 
 
