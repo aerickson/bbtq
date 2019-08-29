@@ -6,10 +6,8 @@ import toml
 import sys
 
 # custom formatter to drop the string encoding indicators like u"test"
+# TODO: not sure if this does anything any more, get rid of
 def my_safe_repr(object, context, maxlevels, level):
-    typ = pprint._type(object)
-    if typ is unicode:
-        object = str(object)
     return pprint._safe_repr(object, context, maxlevels, level)
 
 def main(file_path, toml_path):
@@ -35,7 +33,8 @@ def main(file_path, toml_path):
         print("ERROR: can't handle that input yet")
         sys.exit(1)
 
-    printer.pprint(return_value)
+    # printer.pprint(return_value)
+    print(return_value)
     sys.exit(0)
 
 
