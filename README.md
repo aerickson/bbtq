@@ -29,6 +29,13 @@ $ tq .database.ports test/test.toml
 [8001, 8001, 8002]
 ```
 
+## known limitations
+
+- supports a limited filter syntax
+  - doesn't support bracket syntax (array element access)
+    - e.g. .database.ports[0]
+  - doesn't support pipe operator
+
 ## todo
 
 - rename binary to btq (users can alias if they want at tq)
