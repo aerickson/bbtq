@@ -33,6 +33,10 @@ $ ./tq .database.ports test/test.toml
 
 - Only supports queries from depth 0-2 currently.
 
+## todo
+
+- rename binary to btq (users can alias if they want at tq)
+
 ## why
 
 - I couldn't get yq's experimental support for TOML working.
