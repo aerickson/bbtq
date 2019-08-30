@@ -11,7 +11,7 @@ Python 3 likely
 ## usage
 
 ```bash
-$ ./tq . test/test.toml
+$ tq . test/test.toml
 title = "TOML Example"
 
 [owner]
@@ -23,9 +23,9 @@ server = "192.168.1.1"
 ports = [ 8001, 8001, 8002,]
 connection_max = 5000
 enabled = true
-$ ./tq .title test/test.toml
+$ tq .title test/test.toml
 TOML Example
-$ ./tq .database.ports test/test.toml
+$ tq .database.ports test/test.toml
 [8001, 8001, 8002]
 ```
 
