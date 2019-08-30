@@ -8,6 +8,10 @@ A barebones python tq (like jq, but for toml).
 
 Python 3 likely
 
+## installation
+
+`pip3 install git+https://github.com/aerickson/btq.git@master`
+
 ## usage
 
 ```bash
