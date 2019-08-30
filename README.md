@@ -1,4 +1,4 @@
-# tq
+# btq
 
 A barebones python tq (like jq, but for toml).
 
