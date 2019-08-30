@@ -4,6 +4,8 @@ A barebones python TOML processor (like jq, but for toml).
 
 [![Build Status](https://travis-ci.com/aerickson/tq.svg?branch=master)](https://travis-ci.com/aerickson/tq)
 
+[![Coverage Status](https://coveralls.io/repos/github/aerickson/btq/badge.svg)](https://coveralls.io/github/aerickson/btq)
+
 ## requirements
 
 Python 3 likely
