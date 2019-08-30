@@ -31,6 +31,8 @@ $ tq .title test/test.toml
 TOML Example
 $ tq .database.ports test/test.toml
 [8001, 8001, 8002]
+$ tq ".database.ports[2]" test/test.toml
+8002
 ```
 
 ## known limitations
