@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "btq"
+version = "0.0.1"
+description = "A barebones TOML processor (like jq)."
+authors = ["Andrew Erickson <aerickson@gmail.com>"]
+license = "GPL-3.0"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+toml = "^0.10.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
