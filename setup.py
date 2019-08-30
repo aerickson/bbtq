@@ -5,7 +5,7 @@ setup(
     version='0.0.1',
     author='Andrew J. Erickson',
     author_email='aerickson@gmail.com',
-    packages=['tq'],
+    packages=['btq'],
     scripts=['bin/tq'],
     url='http://pypi.python.org/pypi/btq/',
     license='LICENSE.txt',
