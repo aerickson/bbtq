@@ -34,10 +34,21 @@ def main(file_path, toml_path):
             # '.' filter input. is that legal syntax?
             if item == '':
                 break
+            elif item.endswith(']'):
+                array_parts = item.split('[')
+                filter_key = array_parts[0]
+                filter_index = int(array_parts[1][:-1])
+                return_value = return_value[filter_key][filter_index]
             else:
                 return_value = return_value[item]
     except KeyError:
         print("ERROR: Invalid key ('%s')!" % item)
+        sys.exit(1)
+    except IndexError:
+        print("ERROR: Array index is invalid ('%s')!" % item)
+        sys.exit(1)
+    except ValueError:
+        print("ERROR: Malformed array filter ('%s')!" % item)
         sys.exit(1)
 
     print_object(return_value)

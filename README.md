@@ -32,8 +32,6 @@ $ tq .database.ports test/test.toml
 ## known limitations
 
 - supports a limited filter syntax
-  - doesn't support bracket syntax (array element access)
-    - e.g. .database.ports[0]
   - doesn't support pipe operator
 
 ## todo

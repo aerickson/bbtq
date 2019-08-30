@@ -37,3 +37,10 @@ def test_deep(root_dir):
     result = subprocess.run(command, shell=True, capture_output=True)
     expected = "red"
     assert result.stdout.decode().strip() == expected
+
+def test_array_access(root_dir):
+    # tq .fruit.apple.color test/deep.toml
+    command = "%s/bin/tq '.this.ports[1]' %s/test/deep.toml" % (root_dir, root_dir)
+    result = subprocess.run(command, shell=True, capture_output=True)
+    expected = "8001"
+    assert result.stdout.decode().strip() == expected
