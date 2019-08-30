@@ -8,7 +8,7 @@ setup(
     packages=['btq'],
     scripts=['bin/tq'],
     url='http://pypi.python.org/pypi/btq/',
-    license='LICENSE',
+    license='GPLv3',
     description='Useful towel-related stuff.',
     long_description=open('README.md').read(),
     install_requires=[
