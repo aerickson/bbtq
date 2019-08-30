@@ -37,7 +37,7 @@ $ tq .database.ports test/test.toml
 ## todo
 
 - rename binary to btq (users can alias if they want at tq)
-- add non-subprocess tests
+- more non-subprocess tests
 
 ## why
 
