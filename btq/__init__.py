@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 
-import argparse
 import toml
 import sys
+
 
 def print_object(obj):
     if type(obj) == dict:
         print(toml.dumps(obj).strip())
     else:
         print(obj)
+
 
 def main(file_path, toml_path):
     return_value = None
@@ -41,13 +42,3 @@ def main(file_path, toml_path):
 
     print_object(return_value)
     sys.exit(0)
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("filter")
-    parser.add_argument('file', nargs='?', type=argparse.FileType('r'),
-                        default=sys.stdin)
-    args = parser.parse_args()
-
-    main(args.file, args.filter)
