@@ -19,25 +19,25 @@ def main(file_path, toml_path):
         # this is a _io.TextIOWrapper object
         data = toml.loads(file_path.read())
 
-    if toml_path == ".":
-        print_object(data)
-        return
-
     split_filter = toml_path.split(".")
-    filter_length = len(split_filter)
+    # drop the first .
+    split_filter = split_filter[1:]
     # print(split_filter)
 
-    # TODO: how to support arbitrary depth without a ton of elif blocks?
+    # set the return value to whole data object and refine gradually
+    # based on the filter in for loop below.
+    return_value = data
     try:
-        if filter_length == 2:
-            return_value = data[split_filter[1]]
-        elif filter_length == 3:
-            return_value = data[split_filter[1]][split_filter[2]]
-        else:
-            print("ERROR: I don't know that query syntax yet (1).")
-            sys.exit(1)
+        for item in split_filter:
+            # if item is '', . was passed in
+            # TODO: this allows trailing dots vs just the simple
+            # '.' filter input. is that legal syntax?
+            if item == '':
+                break
+            else:
+                return_value = return_value[item]
     except KeyError:
-        print("ERROR: I don't know that query syntax yet (2).")
+        print("ERROR: Invalid key ('%s')!" % item)
         sys.exit(1)
 
     print_object(return_value)
