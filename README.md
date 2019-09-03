@@ -2,7 +2,7 @@
 
 A barebones python TOML processor (like jq, but for toml).
 
-[![Build Status](https://travis-ci.com/aerickson/tq.svg?branch=master)](https://travis-ci.com/aerickson/tq) [![Coverage Status](https://coveralls.io/repos/github/aerickson/btq/badge.svg?branch=master)](https://coveralls.io/github/aerickson/btq?branch=master)
+[![Build Status](https://travis-ci.com/aerickson/btq.svg?branch=master)](https://travis-ci.com/aerickson/btq) [![Coverage Status](https://coveralls.io/repos/github/aerickson/btq/badge.svg?branch=master)](https://coveralls.io/github/aerickson/btq?branch=master)
 
 ## requirements
 
