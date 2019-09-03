@@ -1,6 +1,6 @@
 # btq
 
-A barebones python TOML processor (like jq, but for toml).
+barebones toml query. Like jq, but for toml.
 
 [![Build Status](https://travis-ci.com/aerickson/btq.svg?branch=master)](https://travis-ci.com/aerickson/btq) [![Coverage Status](https://coveralls.io/repos/github/aerickson/btq/badge.svg?branch=master)](https://coveralls.io/github/aerickson/btq?branch=master)
 
