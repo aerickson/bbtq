@@ -10,6 +10,18 @@ class BTQException(Exception):
         self.message = message
 
 
+class BTQInvalidKeyException(BTQException):
+    pass
+
+
+class BTQInvalidIndexException(BTQException):
+    pass
+
+
+class BTQInvaildArrayFilterException(BTQException):
+    pass
+
+
 def print_object(obj):
     if type(obj) == dict:
         print(toml.dumps(obj).strip())
@@ -41,11 +53,13 @@ def filter_toml(toml_object, filter_str):
             else:
                 return_value = return_value[item]
     except KeyError:
-        raise BTQException("ERROR: Invalid key ('%s')!" % item)
+        raise BTQInvalidKeyException("ERROR: Invalid key ('%s')!" % item)
     except IndexError:
-        raise BTQException("ERROR: Array index is invalid ('%s')!" % item)
+        raise BTQInvalidIndexException("ERROR: Array index is invalid ('%s')!" % item)
     except ValueError:
-        raise BTQException("ERROR: Malformed array filter ('%s')!" % item)
+        raise BTQInvaildArrayFilterException(
+            "ERROR: Malformed array filter ('%s')!" % item
+        )
     return return_value
 
 
