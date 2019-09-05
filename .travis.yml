@@ -5,6 +5,6 @@ install:
   - 'pip install pipenv'
   - 'pipenv install --dev'
 script:
-  - 'pytest --cov=btq test/ -v'
+  - 'pytest --cov=btq btq/tests/ -v'
 after_success:
   - 'coveralls'
