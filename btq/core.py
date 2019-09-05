@@ -10,16 +10,13 @@ class BTQException(Exception):
         self.message = message
 
 class BTQInvalidKeyException(BTQException):
-    def __init__(self, message):
-        self.message = message
+    pass
 
 class BTQInvalidIndexException(BTQException):
-    def __init__(self, message):
-        self.message = message
+    pass
 
 class BTQInvaildArrayFilterException(BTQException):
-    def __init__(self, message):
-        self.message = message
+    pass
 
 
 def print_object(obj):
