@@ -18,5 +18,6 @@ def test_basic():
 #     result = btq.filter_toml(toml_object, ".car.name..")
 
 
-# def test_main():
-#   pass
+def test_main():
+  with pytest.raises(FileNotFoundError):
+    btq.main('bad_path', 'test_filter')
