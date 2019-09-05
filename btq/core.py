@@ -16,6 +16,9 @@ def print_object(obj):
     else:
         print(obj)
 
+def aaa(string):
+    return string
+
 
 def filter_toml(toml_object, filter_str):
     split_filter = filter_str.split(".")

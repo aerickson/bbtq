@@ -1,5 +1,5 @@
 # __init__.py
 
-__all__ = ["btq"]
+# __all__ = ["btq"]
 
-from .btq import *
+from .core import *
