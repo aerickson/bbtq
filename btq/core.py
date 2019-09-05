@@ -9,11 +9,14 @@ class BTQException(Exception):
     def __init__(self, message):
         self.message = message
 
+
 class BTQInvalidKeyException(BTQException):
     pass
 
+
 class BTQInvalidIndexException(BTQException):
     pass
+
 
 class BTQInvaildArrayFilterException(BTQException):
     pass
@@ -24,9 +27,6 @@ def print_object(obj):
         print(toml.dumps(obj).strip())
     else:
         print(obj)
-
-def aaa(string):
-    return string
 
 
 def filter_toml(toml_object, filter_str):
@@ -57,7 +57,9 @@ def filter_toml(toml_object, filter_str):
     except IndexError:
         raise BTQInvalidIndexException("ERROR: Array index is invalid ('%s')!" % item)
     except ValueError:
-        raise BTQInvaildArrayFilterException("ERROR: Malformed array filter ('%s')!" % item)
+        raise BTQInvaildArrayFilterException(
+            "ERROR: Malformed array filter ('%s')!" % item
+        )
     return return_value
 
 
