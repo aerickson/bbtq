@@ -10,6 +10,7 @@ pylint = "*"
 black = "*"
 coveralls = "*"
 bump2version = "*"
+pre-commit = "*"
 
 [packages]
 toml = "*"
