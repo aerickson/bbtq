@@ -8,11 +8,20 @@ import btq
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "file", type=argparse.FileType("r"), default=None if sys.stdin.isatty() else sys.stdin,
-            help='accepts "-" (stdin) also'
+        "file",
+        type=argparse.FileType("r"),
+        default=None if sys.stdin.isatty() else sys.stdin,
+        help='accepts "-" (stdin) also',
     )
-    parser.add_argument("filter", nargs="?", default=".", help='defaults to "." (shows the entire document)')
-    parser.add_argument('--version', action='version', version='b%(prog)s 2.0.0, barebones TOML query')
+    parser.add_argument(
+        "filter",
+        nargs="?",
+        default=".",
+        help='defaults to "." (shows the entire document)',
+    )
+    parser.add_argument(
+        "--version", action="version", version="b%(prog)s 2.0.0, barebones TOML query"
+    )
     args = parser.parse_args()
 
     btq.main(args.file, args.filter)
