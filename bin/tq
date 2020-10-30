@@ -7,10 +7,11 @@ import btq
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("filter")
     parser.add_argument(
-        "file", nargs="?", type=argparse.FileType("r"), default=(None if sys.stdin.isatty() else sys.stdin)
+        "file", nargs="?", type=argparse.FileType("r"), default=None if sys.stdin.isatty() else sys.stdin,
+            help='defaults to "-"/stdin'
     )
+    parser.add_argument("filter", help='defaults to ".", which will show the entire document')
     args = parser.parse_args()
 
     btq.main(args.file, args.filter)
