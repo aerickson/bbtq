@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='btq',
-    version='1.0.0',
+    version='2.0.0',
     author='Andrew J. Erickson',
     author_email='aerickson@gmail.com',
     packages=['btq'],
