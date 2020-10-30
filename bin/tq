@@ -11,7 +11,7 @@ if __name__ == "__main__":
         "file", nargs="?", type=argparse.FileType("r"), default=None if sys.stdin.isatty() else sys.stdin,
             help='defaults to "-"/stdin'
     )
-    parser.add_argument("filter", help='defaults to ".", which will show the entire document')
+    parser.add_argument("filter", default=".", help='defaults to ".", which will show the entire document')
     parser.add_argument('--version', action='version', version='b%(prog)s 0.2.0, barebones TOML query')
     args = parser.parse_args()
 
