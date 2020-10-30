@@ -4,7 +4,7 @@ test:
 	./bin/tq btq/tests/simple.toml .
 
 pipe_test:
-	cat btq/tests/simple.toml | ./bin/tq .
+	cat btq/tests/simple.toml | ./bin/tq - .
 
 bad_test:
 	./bin/tq . badbad.toml
