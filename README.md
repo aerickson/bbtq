@@ -16,7 +16,7 @@ Python 3 likely
 
 ```bash
 # a search of '.' shows the entire document
-$ tq . test/test.toml
+$ tq btq/tests/test.toml .
 title = "TOML Example"
 
 [owner]
@@ -28,17 +28,19 @@ server = "192.168.1.1"
 ports = [ 8001, 8001, 8002,]
 connection_max = 5000
 enabled = true
+
 # retrieve items
-$ tq .title test/test.toml
+$ tq btq/tests/test.toml .title
 TOML Example
-$ tq .database.ports test/test.toml
+$ tq btq/tests/test.toml .database.ports
 [8001, 8001, 8002]
+
 # retreive an array element
-$ tq ".database.ports[2]" test/test.toml
+$ tq ".database.ports[2]" btq/tests/test.toml
 8002
 
 # can also be used via pipe
-cat b.toml | ./bin/tq .
+$ cat btq/tests/test.toml | ./bin/tq .
 ```
 
 ## known limitations
