@@ -45,13 +45,9 @@ $ cat btq/tests/test.toml | ./bin/tq - .
 
 ## known limitations
 
-- supports a limited filter syntax
+- supports a subset of yq filter syntax
+  - https://mikefarah.gitbook.io/yq/usage/path-expressions
   - doesn't support pipe operator
-
-## todo
-
-- rename binary to btq (users can alias if they want at tq)
-- more non-subprocess tests
 
 ## why
 
@@ -59,6 +55,14 @@ $ cat btq/tests/test.toml | ./bin/tq - .
 - I wanted a python implementation, all others seem to use go.
 
 ## development
+
+### todo
+
+- rename binary to btq (users can alias if they want at tq)
+- more non-subprocess tests
+- use a release tool that does more?
+  - https://github.com/c4urself/bump2version/blob/master/RELATED.md
+  - https://pypi.org/project/changes/
 
 ### incrementing version
 
