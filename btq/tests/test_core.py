@@ -14,19 +14,19 @@ def test_basic():
 def test_filter_exceptions_1():
     with pytest.raises(btq.BTQInvalidKeyException):
         toml_object = toml.loads("[car]\nname = 'fun car'")
-        _r = btq.filter_toml(toml_object, ".car.zzz")
+        btq.filter_toml(toml_object, ".car.zzz")
 
 
 def test_filter_exceptions_2():
     with pytest.raises(btq.BTQInvalidIndexException):
         toml_object = toml.loads("[car]\nname = [1,2,3]")
-        _r = btq.filter_toml(toml_object, ".car.name[7]")
+        btq.filter_toml(toml_object, ".car.name[7]")
 
 
 def test_filter_exceptions_3():
     with pytest.raises(btq.BTQInvaildArrayFilterException):
         toml_object = toml.loads("[car]\nname = [1,2,3]")
-        _r = btq.filter_toml(toml_object, ".car.name[string]")
+        btq.filter_toml(toml_object, ".car.name[string]")
 
 
 def test_main_exception_bad_file():
