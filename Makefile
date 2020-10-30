@@ -6,4 +6,8 @@ test:
 pipe_test:
 	cat btq/tests/simple.toml | ./bin/tq .
 
+bad_test:
+	./bin/tq . badbad.toml
 
+pytest:
+	pytest --cov=btq btq/tests/ -v
