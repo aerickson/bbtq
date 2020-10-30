@@ -64,6 +64,7 @@ def filter_toml(toml_object, filter_str):
         )
     return return_value
 
+
 # TODO: where should this live?
 def main(file_path, toml_path=""):
     return_value = None
