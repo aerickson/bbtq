@@ -40,7 +40,7 @@ $ tq ".database.ports[2]" btq/tests/test.toml
 8002
 
 # can also be used via pipe
-$ cat btq/tests/test.toml | ./bin/tq .
+$ cat btq/tests/test.toml | ./bin/tq - .
 ```
 
 ## known limitations
