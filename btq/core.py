@@ -66,7 +66,7 @@ def filter_toml(toml_object, filter_str):
 # TODO: where should this live?
 def main(file_path, toml_path=""):
     # TODO: check that file exists
-    print(file_path)
+    # print(file_path)
     if not file_path:
         print("ERROR: a file must be specified!")
         sys.exit(1)
