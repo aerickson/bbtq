@@ -12,7 +12,7 @@ if __name__ == "__main__":
             help='accepts "-" (stdin) also'
     )
     parser.add_argument("filter", nargs="?", default=".", help='defaults to "." (shows the entire document)')
-    parser.add_argument('--version', action='version', version='b%(prog)s 0.1.0, barebones TOML query')
+    parser.add_argument('--version', action='version', version='b%(prog)s 2.0.0, barebones TOML query')
     args = parser.parse_args()
 
     btq.main(args.file, args.filter)
