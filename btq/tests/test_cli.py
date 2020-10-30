@@ -32,12 +32,17 @@ def test_lvl2(root_dir):
     expected = "[8001, 8001, 8002]"
     assert result.stdout.decode().strip() == expected
 
+
 def test_deep(root_dir):
     # tq .fruit.apple.color test/deep.toml
-    command = "%s/bin/tq .fruit.apple.color %s/btq/tests/deep.toml" % (root_dir, root_dir)
+    command = "%s/bin/tq .fruit.apple.color %s/btq/tests/deep.toml" % (
+        root_dir,
+        root_dir,
+    )
     result = subprocess.run(command, shell=True, capture_output=True)
     expected = "red"
     assert result.stdout.decode().strip() == expected
+
 
 def test_array_access(root_dir):
     # tq .fruit.apple.color test/deep.toml

@@ -1,8 +1,9 @@
 import os
 
-import btq
 import pytest
 import toml
+
+import btq
 
 
 def test_basic():
@@ -32,4 +33,12 @@ def test_filter_exceptions_3():
 
 def test_main_exception_bad_file():
     with pytest.raises(FileNotFoundError):
-        btq.main('bad_path', 'test_filter')
+        btq.main("bad_path", "test_filter")
+
+
+# check main's handling of exceptions
+def test_main_exception():
+    with pytest.raises(SystemExit) as pytest_wrapped_e:
+        btq.main("./btq/tests/deep.toml", ".fruit.apple.color.peach")
+    assert pytest_wrapped_e.type == SystemExit
+    assert pytest_wrapped_e.value.code == 1
