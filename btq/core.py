@@ -53,6 +53,8 @@ def filter_toml(toml_object, filter_str):
                 return_value = return_value[filter_key][filter_index]
             else:
                 return_value = return_value[item]
+    except TypeError:
+        raise BTQInvalidKeyException("ERROR: Invalid key ('%s')!" % item)
     except KeyError:
         raise BTQInvalidKeyException("ERROR: Invalid key ('%s')!" % item)
     except IndexError:
@@ -65,12 +67,6 @@ def filter_toml(toml_object, filter_str):
 
 # TODO: where should this live?
 def main(file_path, toml_path=""):
-    # TODO: check that file exists
-    # print(file_path)
-    if not file_path:
-        print("ERROR: a file must be specified!")
-        sys.exit(1)
-
     return_value = None
     if type(file_path) == str:
         data = toml.load(open(file_path))

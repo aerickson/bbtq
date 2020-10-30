@@ -3,6 +3,7 @@ import subprocess
 
 import pytest
 
+import btq
 
 @pytest.fixture
 # script working directory
