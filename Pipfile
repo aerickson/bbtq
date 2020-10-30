@@ -7,10 +7,12 @@ verify_ssl = true
 pytest = "*"
 python-coveralls = "*"
 pytest-cov = "*"
+pylint = "*"
+black = "*"
 
 [packages]
 toml = "*"
 btq = {editable = true,path = "."}
 
 [requires]
-python_version = "3.7"
+python_version = "3.9"
