@@ -11,5 +11,7 @@ setup(
     license="GPLv3",
     description="Useful towel-related stuff.",
     long_description=open("README.md").read(),
-    install_requires=["toml >= 0.10.0",],  # noqa
+    install_requires=[
+        "toml >= 0.10.0",
+    ],
 )
