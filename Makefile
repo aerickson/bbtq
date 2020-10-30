@@ -1,3 +1,5 @@
+all_test: test pipe_test
+
 test:
 	./bin/tq . btq/tests/simple.toml
 
