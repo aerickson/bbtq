@@ -58,6 +58,14 @@ $ cat btq/tests/test.toml | ./bin/tq - .
 - I couldn't get yq's experimental support for TOML working.
 - I wanted a python implementation, all others seem to use go.
 
+## development
+
+### incrementing version
+
+Do this on master once the PR has landed.
+
+`bump2version --dry-run --verbose major`
+
 ## links
 
 - jq: https://github.com/stedolan/jq
