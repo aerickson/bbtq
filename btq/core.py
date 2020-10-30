@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os.path
 import sys
 
 import toml
@@ -62,8 +63,14 @@ def filter_toml(toml_object, filter_str):
         )
     return return_value
 
+# TODO: where should this live?
+def main(file_path, toml_path=""):
+    # TODO: check that file exists
+    print(file_path)
+    if not file_path:
+        print("ERROR: a file must be specified!")
+        sys.exit(1)
 
-def main(file_path, toml_path):
     return_value = None
     if type(file_path) == str:
         data = toml.load(open(file_path))

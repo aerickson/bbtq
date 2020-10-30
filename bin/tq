@@ -9,7 +9,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("filter")
     parser.add_argument(
-        "file", nargs="?", type=argparse.FileType("r"), default=sys.stdin
+        "file", nargs="?", type=argparse.FileType("r"), default=(None if sys.stdin.isatty() else sys.stdin)
     )
     args = parser.parse_args()
 
