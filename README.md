@@ -15,6 +15,7 @@ Python 3 likely
 ## usage
 
 ```bash
+# a search of '.' shows the entire document
 $ tq . test/test.toml
 title = "TOML Example"
 
@@ -27,12 +28,17 @@ server = "192.168.1.1"
 ports = [ 8001, 8001, 8002,]
 connection_max = 5000
 enabled = true
+# retrieve items
 $ tq .title test/test.toml
 TOML Example
 $ tq .database.ports test/test.toml
 [8001, 8001, 8002]
+# retreive an array element
 $ tq ".database.ports[2]" test/test.toml
 8002
+
+# can also be used via pipe
+cat b.toml | ./bin/tq .
 ```
 
 ## known limitations
