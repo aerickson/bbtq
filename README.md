@@ -36,7 +36,7 @@ $ tq btq/tests/test.toml .database.ports
 [8001, 8001, 8002]
 
 # retreive an array element
-$ tq ".database.ports[2]" btq/tests/test.toml
+$ tq btq/tests/test.toml ".database.ports[2]"
 8002
 
 # can also be used via pipe
