@@ -33,10 +33,10 @@ jobs:
     - name: run pre-commit
       run: |
         pipenv run pre-commit run --all --verbose
-    - name: run unit tests
-      env:
-        # see https://docs.github.com/en/actions/reference/authentication-in-a-workflow
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: run unit tests and gather coverage
       run: |
         pipenv run pytest --cov=btq btq/tests/ -v
-        pipenv run coveralls
+    - name: upload coverage data to coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
