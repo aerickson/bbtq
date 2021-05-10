@@ -37,6 +37,8 @@ jobs:
       run: |
         pipenv run pytest --cov=btq btq/tests/ -v
     - name: upload coverage data to coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        pipenv run coveralls
+
