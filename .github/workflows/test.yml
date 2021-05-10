@@ -34,8 +34,9 @@ jobs:
       run: |
         pipenv run pre-commit run --all --verbose
     - name: run unit tests
-    # see https://docs.github.com/en/actions/reference/authentication-in-a-workflow
-      env: GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      env: 
+        # see https://docs.github.com/en/actions/reference/authentication-in-a-workflow
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         pipenv run pytest --cov=btq btq/tests/ -v
         pipenv run coveralls
