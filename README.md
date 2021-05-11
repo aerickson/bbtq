@@ -2,8 +2,8 @@
 
 Barebones TOML query. Like jq, but for TOML instead of JSON.
 
-[![Coverage Status](https://coveralls.io/repos/github/aerickson/btq/badge.svg?branch=master)](https://coveralls.io/github/aerickson/btq?branch=master)
 [![Test Status](https://github.com/aerickson/btq/actions/workflows/test.yml/badge.svg)](https://github.com/aerickson/btq/actions/workflows/test.yml)
+[![Coverage Status](https://coveralls.io/repos/github/aerickson/btq/badge.svg?branch=master)](https://coveralls.io/github/aerickson/btq?branch=master)
 
 ## requirements
 
