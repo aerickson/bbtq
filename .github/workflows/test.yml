@@ -36,8 +36,6 @@ jobs:
     - name: "run unit tests and gather coverage"
       run: |
         pipenv run pytest --cov=btq btq/tests/ -v
-    - name: "Upload coverage to Codecov"
-      uses: codecov/codecov-action@v1
-      with:
-        fail_ci_if_error: true
-        directory: ./btq/
+    - name: "upload coverage to codecov"
+      run: |
+        bash <(curl -s https://codecov.io/bash)
