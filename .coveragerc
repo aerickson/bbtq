@@ -2,3 +2,6 @@
 show_missing = True
 omit =
     btq/tests/*
+
+[run]
+source = btq
