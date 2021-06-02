@@ -11,6 +11,7 @@ black = "*"
 bump2version = "*"
 pre-commit = "*"
 pytest-codecov = "*"
+gitpython = "*"
 
 [packages]
 toml = "*"
