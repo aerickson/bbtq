@@ -37,4 +37,8 @@ jobs:
       env:
         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       run: |
-        pipenv run pytest --cov=btq btq/tests/ -v --codecov
+        pipenv run pytest --cov=btq btq/tests/ -v
+    - uses: codecov/codecov-action@v1
+      with:
+        fail_ci_if_error: true
+        verbose: true
