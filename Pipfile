@@ -10,8 +10,8 @@ pylint = "*"
 black = "*"
 bump2version = "*"
 pre-commit = "*"
-pytest-codecov = "*"
 gitpython = "*"
+coverage = "*"
 
 [packages]
 toml = "*"

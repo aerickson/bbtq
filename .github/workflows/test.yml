@@ -34,7 +34,5 @@ jobs:
       run: |
         pipenv run pre-commit run --all --verbose
     - name: "run unit tests and gather coverage"
-      env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       run: |
         pipenv run pytest --cov=btq btq/tests/ -v --codecov
