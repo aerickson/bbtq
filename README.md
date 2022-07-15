@@ -7,7 +7,13 @@ Barebones TOML query. Like jq, but for TOML instead of JSON.
 
 ## installation
 
-`pip3 install git+https://github.com/aerickson/bbtq.git@master`
+```bash
+# via pypi
+pip3 install bbtq
+
+# directly from repo
+pip3 install git+https://github.com/aerickson/bbtq.git@master
+```
 
 ## usage
 
