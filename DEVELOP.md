@@ -16,7 +16,7 @@ Do this on master once the PR has landed.
 
 ## publishing
 
-Currently using pipenv and hatch.
+Currently using hatch (and pipenv for dev deps).
 
 TODO: Switch to poetry for all?
 
