@@ -21,6 +21,12 @@ dependencies = [
 [tool.poetry.scripts]
 tq = "bbtq.cli:main"
 
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^2.20.0"
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+black = "^22.6.0"
+
 [project.urls]
 "Homepage" = "https://github.com/aerickson/bbtq"
 "Bug Tracker" = "https://github.com/aerickson/bbtq/issues"
@@ -46,9 +52,6 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.7"
 toml = "^0.10.0"
-
-[tool.poetry.dev-dependencies]
-pytest = "^5.1"
 
 #[tool.poetry-version-plugin]
 #source = "init"
