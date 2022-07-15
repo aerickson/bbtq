@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v3.0.2 (NOT RELEASED)
+
+- pypi listing improvements
+
 ## v3.0.1
 
 - binary was broken in v3.0.0
