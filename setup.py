@@ -1,3 +1,4 @@
+""" setup.py """
 from distutils.core import setup
 
 setup(
@@ -10,7 +11,7 @@ setup(
     url="http://pypi.python.org/pypi/btq/",
     license="GPLv3",
     description="Barebones TOML query.",
-    long_description=open("README.md").read(),
+    long_description=open("README.md", encoding="utf-8").read(),
     install_requires=[
         "toml >= 0.10.0",
     ],
