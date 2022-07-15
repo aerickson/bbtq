@@ -14,12 +14,44 @@ classifiers = [
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+  'toml >= 0.10.0',
+]
+
+[tool.poetry.scripts]
+tq = "bbtq.cli:main"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^2.20.0"
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+black = "^22.6.0"
 
 [project.urls]
 "Homepage" = "https://github.com/aerickson/bbtq"
 "Bug Tracker" = "https://github.com/aerickson/bbtq/issues"
+
 [build-system]
+# use hatch/hatchling
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+# use poetry
+# requires = ["poetry-core"]
+# build-backend = "poetry.core.masonry.api"
+
 [tool.hatch.version]
 path = "bbtq/__init__.py"
+
+[tool.poetry]
+name = "bbtq"
+version = "3.0.1"
+description = "Barebones TOML query."
+authors = ["Andrew Erickson <aerickson@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+toml = "^0.10.0"
+
+#[tool.poetry-version-plugin]
+#source = "init"

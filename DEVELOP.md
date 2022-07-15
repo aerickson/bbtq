@@ -1,6 +1,26 @@
 # bbtq development
 
-## todo
+## setup and testing
+
+```bash
+# install poetry if not already installed
+# - use a preview version
+curl -sSL https://install.python-poetry.org | POETRY_PREVIEW=1 python3 -
+
+# open a poetry shell virtualenv
+poetry shell
+
+# install deps
+poetry install --with=dev
+
+# run cli
+poetry run tq
+
+# test
+pytest
+```
+
+## TODO
 
 - rename binary to bbtq (users can alias if they want at tq)
 - more non-subprocess tests
@@ -10,13 +30,36 @@
 
 ## incrementing version
 
-Do this on master once the PR has landed.
+Set in pyproject.toml at [tool.poetry.version].
 
-`bump2version --dry-run --verbose major`
+Follow semantic versioning.
 
 ## publishing
 
-Currently using hatch/hatchling.
+```bash
+## setup
+#
+poetry config pypi-token.pypi YOUR_PROD_TOKEN
+# test.pypi setup
+poetry config repositories.test-pypi https://test.pypi.org/legacy/
+poetry config pypi-token.test-pypi YOUR_TEST_TOKEN
 
-see https://packaging.python.org/en/latest/tutorials/packaging-projects/ and
-https://hatch.pypa.io/latest/publish/.
+## publishing to test server (https://test.pypi.org/)
+#
+# set a version that doesn't exist on test (can be lower, doesn't matter)
+poetry build
+poetry publish --dry-run -r test-pypi
+poetry publish -r test-pypi
+# go to https://test.pypi.org/project/bbtq
+# find version just uploaded
+# pip3 install outside of venv
+# test it's workings
+
+## publish for real
+#
+# set the version for real
+rm -rf dist/
+poetry build
+# verify version is good
+poetry publish --dry-run  # remove --dry-run to do for real
+```
