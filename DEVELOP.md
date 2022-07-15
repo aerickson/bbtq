@@ -1,11 +1,18 @@
 # bbtq development
 
 ```bash
-
-# plugin needs preview version
+# install poetry if not already installed
+# - use a preview version
 curl -sSL https://install.python-poetry.org | POETRY_PREVIEW=1 python3 -
-poetry self add poetry-version-plugin
 
+# open a poetry shell virtualenv
+poetry shell
+
+# install deps
+poetry install --dev
+
+# run cli
+poetry run tq
 ```
 
 ## TODO
