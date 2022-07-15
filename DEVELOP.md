@@ -9,7 +9,7 @@ curl -sSL https://install.python-poetry.org | POETRY_PREVIEW=1 python3 -
 poetry shell
 
 # install deps
-poetry install --dev
+poetry install --with=dev
 
 # run cli
 poetry run tq
