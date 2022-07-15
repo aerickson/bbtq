@@ -2,7 +2,7 @@
 """ __init__.py """
 
 __all__ = ["core"]
-__version__ = "3.0.1"
+__version__ = "3.0.0"
 
 from .core import (  # noqa
     main,
