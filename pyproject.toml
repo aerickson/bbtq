@@ -14,6 +14,9 @@ classifiers = [
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+  'toml ~= ^0.10.0',
+]
 
 [project.urls]
 "Homepage" = "https://github.com/aerickson/bbtq"
@@ -32,13 +35,17 @@ path = "bbtq/__init__.py"
 
 [tool.poetry]
 name = "bbtq"
-version = "0"
+version = "3.0.0"
 description = "Barebones TOML query."
 authors = ["Andrew Erickson <aerickson@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.7"
+toml = "^0.10.0"
 
-[tool.poetry-version-plugin]
-source = "init"
+[tool.poetry.dev-dependencies]
+pytest = "^5.1"
+
+#[tool.poetry-version-plugin]
+#source = "init"
