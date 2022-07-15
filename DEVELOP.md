@@ -39,7 +39,7 @@ Follow semantic versioning.
 ```bash
 ## setup
 #
-poetry config pypi-token YOUR_PROD_TOKEN
+poetry config pypi-token.pypi YOUR_PROD_TOKEN
 # test.pypi setup
 poetry config repositories.test-pypi https://test.pypi.org/legacy/
 poetry config pypi-token.test-pypi YOUR_TEST_TOKEN
