@@ -37,15 +37,28 @@ Follow semantic versioning.
 ## publishing
 
 ```bash
+## setup
+#
 # test.pypi setup
 poetry config repositories.test-pypi https://test.pypi.org/legacy/
-poetry config pypi-token.test-pypi <your-token>
+poetry config pypi-token.test-pypi YOUR_TOKEN
 
-# publishing to test server (https://test.pypi.org/)
+## publishing to test server (https://test.pypi.org/)
+#
+# set a version that doesn't exist on test (can be lower, doesn't matter)
 poetry build
 poetry publish --dry-run -r test-pypi
 poetry publish -r test-pypi
+# go to https://test.pypi.org/project/bbtq
+# find version just uploaded
+# pip3 install outside of venv
+# test it's workings
 
-# publish for real
-poetry publish --dry-run
+## publish for real
+#
+# set the version for real
+rm -rf dist/
+poetry build
+# verify version is good
+poetry publish --dry-run  # remove --dry-run to do for real
 ```
