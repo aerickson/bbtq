@@ -37,6 +37,6 @@ def test_main_exception_bad_file():
 # check main's handling of exceptions
 def test_main_exception():
     with pytest.raises(SystemExit) as pytest_wrapped_e:
-        bbtq.main("./btq/tests/deep.toml", ".fruit.apple.color.peach")
+        bbtq.main("./bbtq/tests/deep.toml", ".fruit.apple.color.peach")
     assert pytest_wrapped_e.type == SystemExit
     assert pytest_wrapped_e.value.code == 1
