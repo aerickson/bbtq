@@ -34,6 +34,10 @@ Set in pyproject.toml at [tool.poetry.version].
 
 Follow semantic versioning.
 
+## updating the changelog
+
+see https://black.readthedocs.io/en/latest/contributing/release_process.html#changelog-template for formatting.
+
 ## publishing
 
 ```bash
