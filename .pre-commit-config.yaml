@@ -13,7 +13,12 @@ repos:
     rev: 3.9.2
     hooks:
     - id: flake8
--   repo: https://github.com/pre-commit/mirrors-pylint
-    rev: 'v3.0.0a5'
+-   repo: local
     hooks:
     -   id: pylint
+        # must be run in pipenv
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        args: [-E]  # only look for errors
