@@ -5,10 +5,6 @@ Barebones TOML query. Like jq, but for TOML instead of JSON.
 [![Test Status](https://github.com/aerickson/bbtq/actions/workflows/test.yml/badge.svg)](https://github.com/aerickson/bbtq/actions/workflows/test.yml)
 [![Code Coverage](https://codecov.io/gh/aerickson/bbtq/branch/master/graph/badge.svg?token=y0FQaJuAJu)](https://codecov.io/gh/aerickson/bbtq)
 
-## requirements
-
-Python 3 likely
-
 ## installation
 
 `pip3 install git+https://github.com/aerickson/bbtq.git@master`
