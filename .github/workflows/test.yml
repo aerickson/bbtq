@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: [3.9]
+        python-version: [3.7, 3.9]
 
     steps:
     - uses: actions/checkout@v2
@@ -47,9 +47,9 @@ jobs:
         poetry run pre-commit run --all --verbose
     - name: "run unit tests and gather coverage"
       run: |
-        poetry run pytest --cov=bbtq bbtq/tests/ -v
+        poetry run pytest --cov=bbtq --cov-report xml bbtq/tests/ -v
     - uses: codecov/codecov-action@v3
       with:
-        files:  .coverage
+        files: coverage.xml
         fail_ci_if_error: true
-        verbose: false
+        verbose: true
