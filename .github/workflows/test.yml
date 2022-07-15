@@ -48,7 +48,7 @@ jobs:
         pipenv run pre-commit run --all --verbose
     - name: "run unit tests and gather coverage"
       run: |
-        pipenv run pytest --cov=btq btq/tests/ -v
+        pipenv run pytest --cov=bbtq bbtq/tests/ -v
     - uses: codecov/codecov-action@v1
       with:
         files:  .coverage
