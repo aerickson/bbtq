@@ -60,5 +60,6 @@ $ cat bbtq/tests/test.toml | ./bin/tq - .
 
 ## links
 
-- jq: https://github.com/stedolan/jq
-- yq: https://github.com/kislyuk/yq
+- jq (c): https://github.com/stedolan/jq
+- yq (python): https://github.com/kislyuk/yq
+- tomlq (go): https://github.com/jamesmunns/tomlq
