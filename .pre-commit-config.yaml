@@ -21,4 +21,8 @@ repos:
         entry: pylint
         language: system
         types: [python]
-        args: [-E]  # only look for errors
+        args:
+          [
+            "-rn", # Only display messages
+            "-sn", # Don't display the score
+          ]
