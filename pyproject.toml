@@ -9,7 +9,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "bbtq"
-version = "3.0.2"
+version = "3.0.1"
 description = "Barebones TOML query."
 authors = ["Andrew Erickson <aerickson@gmail.com>"]
 readme = "README.md"
