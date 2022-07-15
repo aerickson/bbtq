@@ -12,7 +12,7 @@ def root_dir():
 
 
 def test_lvl0(root_dir):
-    command = "%s/bin/tq %s/btq/tests/simple.toml ." % (root_dir, root_dir)
+    command = "%s/bin/tq %s/bbtq/tests/simple.toml ." % (root_dir, root_dir)
     print(command)
     result = subprocess.run(command, shell=True, capture_output=True)
     expected = 'title = "TOML Example 2345"'
@@ -20,14 +20,14 @@ def test_lvl0(root_dir):
 
 
 def test_lvl1(root_dir):
-    command = "%s/bin/tq %s/btq/tests/test.toml .title" % (root_dir, root_dir)
+    command = "%s/bin/tq %s/bbtq/tests/test.toml .title" % (root_dir, root_dir)
     result = subprocess.run(command, shell=True, capture_output=True)
     expected = "TOML Example"
     assert result.stdout.decode().strip() == expected
 
 
 def test_lvl2(root_dir):
-    command = "%s/bin/tq %s/btq/tests/test.toml .database.ports" % (root_dir, root_dir)
+    command = "%s/bin/tq %s/bbtq/tests/test.toml .database.ports" % (root_dir, root_dir)
     result = subprocess.run(command, shell=True, capture_output=True)
     expected = "[8001, 8001, 8002]"
     assert result.stdout.decode().strip() == expected
@@ -35,7 +35,7 @@ def test_lvl2(root_dir):
 
 def test_deep(root_dir):
     # tq .fruit.apple.color test/deep.toml
-    command = "%s/bin/tq %s/btq/tests/deep.toml .fruit.apple.color" % (
+    command = "%s/bin/tq %s/bbtq/tests/deep.toml .fruit.apple.color" % (
         root_dir,
         root_dir,
     )
@@ -46,7 +46,10 @@ def test_deep(root_dir):
 
 def test_array_access(root_dir):
     # tq .fruit.apple.color test/deep.toml
-    command = "%s/bin/tq %s/btq/tests/deep.toml '.this.ports[1]'" % (root_dir, root_dir)
+    command = "%s/bin/tq %s/bbtq/tests/deep.toml '.this.ports[1]'" % (
+        root_dir,
+        root_dir,
+    )
     result = subprocess.run(command, shell=True, capture_output=True)
     expected = "8001"
     assert result.stdout.decode().strip() == expected
