@@ -1,8 +1,6 @@
 # bbtq development
 
-## general
-
-### todo
+## todo
 
 - rename binary to bbtq (users can alias if they want at tq)
 - more non-subprocess tests
@@ -10,8 +8,12 @@
   - https://github.com/c4urself/bump2version/blob/master/RELATED.md
   - https://pypi.org/project/changes/
 
-### incrementing version
+## incrementing version
 
 Do this on master once the PR has landed.
 
 `bump2version --dry-run --verbose major`
+
+## publishing
+
+see https://packaging.python.org/en/latest/tutorials/packaging-projects/
