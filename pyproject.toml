@@ -18,6 +18,9 @@ dependencies = [
   'toml >= 0.10.0',
 ]
 
+[tool.poetry.scripts]
+tq = "bbtq.cli:main"
+
 [project.urls]
 "Homepage" = "https://github.com/aerickson/bbtq"
 "Bug Tracker" = "https://github.com/aerickson/bbtq/issues"

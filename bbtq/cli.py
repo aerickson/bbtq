@@ -1,13 +1,11 @@
-#!/usr/bin/env python3
-
-"""cli script that drives bbtq."""
-
 import argparse
 import sys
 
-import bbtq
+from . import __version__
+from . import core
 
-if __name__ == "__main__":
+
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "file",
@@ -22,8 +20,14 @@ if __name__ == "__main__":
         help='defaults to "." (shows the entire document)',
     )
     parser.add_argument(
-        "--version", action="version", version="b%(prog)s 2.0.0, barebones TOML query"
+        "--version",
+        action="version",
+        version=f"{parser.prog} {__version__}, barebones TOML query",
     )
     args = parser.parse_args()
 
-    bbtq.main(args.file, args.filter)
+    core.main(args.file, args.filter)
+
+
+if __name__ == "__main__":
+    main()
