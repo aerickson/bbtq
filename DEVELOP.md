@@ -1,5 +1,7 @@
 # bbtq development
 
+## setup and testing
+
 ```bash
 # install poetry if not already installed
 # - use a preview version
@@ -13,6 +15,9 @@ poetry install --with=dev
 
 # run cli
 poetry run tq
+
+# test
+pytest
 ```
 
 ## TODO
@@ -25,15 +30,22 @@ poetry run tq
 
 ## incrementing version
 
-Do this on master once the PR has landed.
+Set in pyproject.toml at [tool.poetry.version].
 
-`bump2version --dry-run --verbose major`
+Follow semantic versioning.
 
 ## publishing
 
-Currently using hatch (and pipenv for dev deps).
+```bash
+# test.pypi setup
+poetry config repositories.test-pypi https://test.pypi.org/legacy/
+poetry config pypi-token.test-pypi <your-token>
 
-TODO: Switch to poetry for all?
+# publishing to test server (https://test.pypi.org/)
+poetry build
+poetry publish --dry-run -r test-pypi
+poetry publish -r test-pypi
 
-see https://packaging.python.org/en/latest/tutorials/packaging-projects/ and
-https://hatch.pypa.io/latest/publish/.
+# publish for real
+poetry publish --dry-run
+```
