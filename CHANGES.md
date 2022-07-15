@@ -2,15 +2,15 @@
 
 <!--next-version-placeholder-->
 
-## v3.0.2 (NOT RELEASED)
+## Unreleased
 
-- pypi listing improvements
 
-## v3.0.1
+
+## v3.0.1 (07/15/2022)
 
 - binary was broken in v3.0.0
 
-## v3.0.0
+## v3.0.0 (07/15/2022)
 
 - rename module to `bbtq`
 
