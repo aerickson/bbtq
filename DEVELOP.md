@@ -1,6 +1,6 @@
 # bbtq development
 
-## todo
+## TODO
 
 - rename binary to bbtq (users can alias if they want at tq)
 - more non-subprocess tests
@@ -16,7 +16,9 @@ Do this on master once the PR has landed.
 
 ## publishing
 
-Currently using hatch/hatchling.
+Currently using pipenv and hatch.
+
+TODO: Switch to poetry for all?
 
 see https://packaging.python.org/en/latest/tutorials/packaging-projects/ and
 https://hatch.pypa.io/latest/publish/.
