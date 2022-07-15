@@ -47,7 +47,7 @@ jobs:
         poetry run pre-commit run --all --verbose
     - name: "run unit tests and gather coverage"
       run: |
-        poetry run pytest --cov=bbtq bbtq/tests/ -v
+        poetry run pytest --cov=bbtq --cov-report xml bbtq/tests/ -v
     - uses: codecov/codecov-action@v3
       with:
         files:  .coverage
