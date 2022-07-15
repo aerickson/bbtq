@@ -3,7 +3,7 @@ from distutils.core import setup
 
 setup(
     name="bbtq",
-    version="2.0.1",
+    version="3.0.0",
     author="Andrew J. Erickson",
     author_email="aerickson@gmail.com",
     packages=["bbtq"],
