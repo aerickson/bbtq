@@ -11,3 +11,6 @@ bad_test:
 
 pytest:
 	pytest --cov=bbtq bbtq/tests/ -v
+
+coverage:
+	poetry run pytest --cov=bbtq bbtq/tests/ -v
