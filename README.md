@@ -49,9 +49,9 @@ $ cat bbtq/tests/test.toml | ./bin/tq - .
 
 ## known limitations
 
-- supports a subset of yq filter syntax
-  - https://mikefarah.gitbook.io/yq/usage/path-expressions
-  - doesn't support pipe operator
+- supports a subset of jq's basic filter syntax
+  - identity and array index specifically
+    - see https://stedolan.github.io/jq/manual/#Basicfilters
 
 ## why
 
