@@ -16,4 +16,7 @@ Do this on master once the PR has landed.
 
 ## publishing
 
-see https://packaging.python.org/en/latest/tutorials/packaging-projects/
+Currently using hatch/hatchling.
+
+see https://packaging.python.org/en/latest/tutorials/packaging-projects/ and
+https://hatch.pypa.io/latest/publish/.
