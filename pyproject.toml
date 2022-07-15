@@ -20,8 +20,25 @@ classifiers = [
 "Bug Tracker" = "https://github.com/aerickson/bbtq/issues"
 
 [build-system]
+# use hatch/hatchling
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+# use poetry
+# requires = ["poetry-core"]
+# build-backend = "poetry.core.masonry.api"
 
 [tool.hatch.version]
 path = "bbtq/__init__.py"
+
+[tool.poetry]
+name = "bbtq"
+version = "0"
+description = "Barebones TOML query."
+authors = ["Andrew Erickson <aerickson@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry-version-plugin]
+source = "init"

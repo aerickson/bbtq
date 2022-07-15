@@ -1,5 +1,13 @@
 # bbtq development
 
+```bash
+
+# plugin needs preview version
+curl -sSL https://install.python-poetry.org | POETRY_PREVIEW=1 python3 -
+poetry plugin add poetry-version-plugin
+
+```
+
 ## TODO
 
 - rename binary to bbtq (users can alias if they want at tq)
