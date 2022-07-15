@@ -1,12 +1,3 @@
-[project.urls]
-"Homepage" = "https://github.com/aerickson/bbtq"
-"Bug Tracker" = "https://github.com/aerickson/bbtq/issues"
-"Changelog" = "https://github.com/aerickson/bbtq/blob/master/CHANGES.md"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-
 [tool.poetry]
 name = "bbtq"
 version = "3.0.1"
@@ -14,6 +5,10 @@ description = "Barebones TOML query."
 authors = ["Andrew Erickson <aerickson@gmail.com>"]
 readme = "README.md"
 homepage = "https://github.com/aerickson/bbtq"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/aerickson/bbtq/issues"
+"Changelog" = "https://github.com/aerickson/bbtq/blob/master/CHANGES.md"
 
 [tool.poetry.dependencies]
 python = "^3.7"
@@ -27,3 +22,7 @@ pre-commit = "^2.20.0"
 pytest = "^7.1.2"
 pytest-cov = "^3.0.0"
 black = "^22.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
