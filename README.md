@@ -50,7 +50,7 @@ $ cat bbtq/tests/test.toml | ./bin/tq - .
 ## known limitations
 
 - supports a subset of jq's basic filter syntax
-  - identity and array index specifically
+  - specifically: identity, object identifier-index, and array index
     - see https://stedolan.github.io/jq/manual/#Basicfilters
 
 ## why
