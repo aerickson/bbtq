@@ -66,5 +66,5 @@ I wanted something that was:
 - jq: https://github.com/stedolan/jq
 - yq (c): https://github.com/mikefarah/yq
 - yq (python): https://github.com/kislyuk/yq
-  - yq's `tomlq` works great and supports much more of the filter syntax
+  - yq's `tomlq` works great and supports much more of jq's filter syntax
 - tomlq (go): https://github.com/jamesmunns/tomlq
