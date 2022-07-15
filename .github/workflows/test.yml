@@ -45,7 +45,7 @@ jobs:
         poetry install --with=dev
     - name: "run pre-commit"
       run: |
-        PRE_COMMIT_HOME=$(pwd)/.pre-commit-cache poetry run pre-commit run --all --verbose
+        PRE_COMMIT_HOME=$HOME/.pre-commit-cache poetry run pre-commit run --all --verbose
     - name: "run unit tests and gather coverage"
       run: |
         poetry run pytest --cov=bbtq --cov-report xml bbtq/tests/ -v
