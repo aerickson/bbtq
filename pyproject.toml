@@ -18,8 +18,10 @@ classifiers = [
 [project.urls]
 "Homepage" = "https://github.com/aerickson/bbtq"
 "Bug Tracker" = "https://github.com/aerickson/bbtq/issues"
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
 [tool.hatch.version]
 path = "bbtq/__init__.py"
