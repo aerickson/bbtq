@@ -58,8 +58,8 @@ $ cat bbtq/tests/test.toml | ./bin/tq - .
 I wanted something that was:
 
 - minimal
-- pure python (python yq depends on jq)
-- standalone
+- python
+- standalone (python yq depends on jq)
 
 ## links
 
