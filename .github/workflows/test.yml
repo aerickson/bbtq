@@ -49,7 +49,7 @@ jobs:
     - name: "run unit tests and gather coverage"
       run: |
         pipenv run pytest --cov=bbtq bbtq/tests/ -v
-    - uses: codecov/codecov-action@v1
+    - uses: codecov/codecov-action@v3
       with:
         files:  .coverage
         fail_ci_if_error: true
