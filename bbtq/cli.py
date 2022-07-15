@@ -1,7 +1,7 @@
 import argparse
 import sys
 
-from . import __version__
+from . import __version__, package_name
 from . import core
 
 
@@ -22,7 +22,7 @@ def main():
     parser.add_argument(
         "--version",
         action="version",
-        version=f"{parser.prog} {__version__}, barebones TOML query",
+        version=f"{package_name} {__version__}, barebones TOML query",
     )
     args = parser.parse_args()
 
