@@ -55,22 +55,6 @@ $ cat bbtq/tests/test.toml | ./bin/tq - .
 - I couldn't get yq's experimental support for TOML working.
 - I wanted a python implementation, all others seem to use go.
 
-## development
-
-### todo
-
-- rename binary to bbtq (users can alias if they want at tq)
-- more non-subprocess tests
-- use a release tool that does more?
-  - https://github.com/c4urself/bump2version/blob/master/RELATED.md
-  - https://pypi.org/project/changes/
-
-### incrementing version
-
-Do this on master once the PR has landed.
-
-`bump2version --dry-run --verbose major`
-
 ## links
 
 - jq: https://github.com/stedolan/jq
