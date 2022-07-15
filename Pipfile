@@ -15,7 +15,7 @@ coverage = "*"
 
 [packages]
 toml = "*"
-btq = {editable = true,path = "."}
+bbtq = {editable = true,path = "."}
 
 [requires]
 python_version = "3.9"

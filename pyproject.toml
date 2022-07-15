@@ -1,0 +1,25 @@
+[project]
+name = "bbtq"
+# version = "3.0.1"  # set dynamically via hatch
+dynamic = ['version']
+authors = [
+  { name="Andrew Erickson", email="aerickson@gmail.com" },
+]
+description = "Barebones TOML query."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/aerickson/bbtq"
+"Bug Tracker" = "https://github.com/aerickson/bbtq/issues"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[tool.hatch.version]
+path = "bbtq/__init__.py"

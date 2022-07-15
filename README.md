@@ -1,23 +1,25 @@
-# btq
+# bbtq
 
 Barebones TOML query. Like jq, but for TOML instead of JSON.
 
-[![Test Status](https://github.com/aerickson/btq/actions/workflows/test.yml/badge.svg)](https://github.com/aerickson/btq/actions/workflows/test.yml)
-[![Code Coverage](https://codecov.io/gh/aerickson/btq/branch/master/graph/badge.svg?token=y0FQaJuAJu)](https://codecov.io/gh/aerickson/btq)
-
-## requirements
-
-Python 3 likely
+[![Test Status](https://github.com/aerickson/bbtq/actions/workflows/test.yml/badge.svg)](https://github.com/aerickson/bbtq/actions/workflows/test.yml)
+[![Code Coverage](https://codecov.io/gh/aerickson/bbtq/branch/master/graph/badge.svg?token=y0FQaJuAJu)](https://codecov.io/gh/aerickson/bbtq)
 
 ## installation
 
-`pip3 install git+https://github.com/aerickson/btq.git@master`
+```bash
+# via pypi
+pip3 install bbtq
+
+# directly from repo
+pip3 install git+https://github.com/aerickson/bbtq.git@master
+```
 
 ## usage
 
 ```bash
 # a search of '.' shows the entire document
-$ tq btq/tests/test.toml .
+$ tq bbtq/tests/test.toml .
 title = "TOML Example"
 
 [owner]
@@ -31,17 +33,17 @@ connection_max = 5000
 enabled = true
 
 # retrieve items
-$ tq btq/tests/test.toml .title
+$ tq bbtq/tests/test.toml .title
 TOML Example
-$ tq btq/tests/test.toml .database.ports
+$ tq bbtq/tests/test.toml .database.ports
 [8001, 8001, 8002]
 
 # retreive an array element
-$ tq btq/tests/test.toml ".database.ports[2]"
+$ tq bbtq/tests/test.toml ".database.ports[2]"
 8002
 
 # can also be used via pipe
-$ cat btq/tests/test.toml | ./bin/tq - .
+$ cat bbtq/tests/test.toml | ./bin/tq - .
 ```
 
 ## known limitations
@@ -54,22 +56,6 @@ $ cat btq/tests/test.toml | ./bin/tq - .
 
 - I couldn't get yq's experimental support for TOML working.
 - I wanted a python implementation, all others seem to use go.
-
-## development
-
-### todo
-
-- rename binary to btq (users can alias if they want at tq)
-- more non-subprocess tests
-- use a release tool that does more?
-  - https://github.com/c4urself/bump2version/blob/master/RELATED.md
-  - https://pypi.org/project/changes/
-
-### incrementing version
-
-Do this on master once the PR has landed.
-
-`bump2version --dry-run --verbose major`
 
 ## links
 

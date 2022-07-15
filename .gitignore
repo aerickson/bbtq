@@ -4,5 +4,6 @@ venv/
 build/
 *.egg-info/
 .coverage
+dist/*
 
 .idea
