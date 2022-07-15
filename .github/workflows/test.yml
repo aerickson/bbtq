@@ -27,7 +27,7 @@ jobs:
     - name: cache deps
       uses: actions/cache@v3
       with:
-        key: ${{ runner.os }}
+        key: ${{ runner.os }}-${{ matrix.python-version }}
         path: |
           ~/.cache
           ~/.poetry
