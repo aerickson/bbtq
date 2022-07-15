@@ -55,12 +55,15 @@ $ cat bbtq/tests/test.toml | ./bin/tq - .
 
 ## why
 
-- I couldn't get yq's experimental support for TOML working.
-- I wanted a python implementation, all others seem to use go.
+I wanted something that was:
+
+- minimal
+- pure python (python yq depends on jq)
+- standalone
 
 ## links
 
-- jq (c): https://github.com/stedolan/jq
-- yq (go): https://github.com/mikefarah/yq
-- yq 2 (python): https://github.com/kislyuk/yq
+- jq: https://github.com/stedolan/jq
+- yq (c): https://github.com/mikefarah/yq
+- yq (python): https://github.com/kislyuk/yq
 - tomlq (go): https://github.com/jamesmunns/tomlq
