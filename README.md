@@ -2,6 +2,7 @@
 
 Barebones TOML query. Like jq, but for TOML instead of JSON.
 
+<a href="https://pypi.org/project/bbtq/"><img alt="PyPI" src="https://img.shields.io/pypi/v/bbtq"></a>
 [![Test Status](https://github.com/aerickson/bbtq/actions/workflows/test.yml/badge.svg)](https://github.com/aerickson/bbtq/actions/workflows/test.yml)
 [![Code Coverage](https://codecov.io/gh/aerickson/bbtq/branch/master/graph/badge.svg?token=y0FQaJuAJu)](https://codecov.io/gh/aerickson/bbtq)
 
