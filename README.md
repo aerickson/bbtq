@@ -49,16 +49,22 @@ $ cat bbtq/tests/test.toml | ./bin/tq - .
 
 ## known limitations
 
-- supports a subset of yq filter syntax
-  - https://mikefarah.gitbook.io/yq/usage/path-expressions
-  - doesn't support pipe operator
+- supports a subset of jq's basic filter syntax
+  - specifically: identity, object identifier-index, and array index
+    - see https://stedolan.github.io/jq/manual/#Basicfilters
 
 ## why
 
-- I couldn't get yq's experimental support for TOML working.
-- I wanted a python implementation, all others seem to use go.
+I wanted something that was:
+
+- minimal
+- python
+- standalone (python yq depends on jq)
 
 ## links
 
 - jq: https://github.com/stedolan/jq
-- yq: https://github.com/kislyuk/yq
+- yq (c): https://github.com/mikefarah/yq
+- yq (python): https://github.com/kislyuk/yq
+  - yq's `tomlq` works great and supports much more of jq's filter syntax
+- tomlq (go): https://github.com/jamesmunns/tomlq
