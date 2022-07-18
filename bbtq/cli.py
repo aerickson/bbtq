@@ -27,7 +27,3 @@ def main():
     args = parser.parse_args()
 
     core.main(args.file, args.filter)
-
-
-if __name__ == "__main__":
-    main()
